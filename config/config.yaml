@@ -1,0 +1,27 @@
+# NovaOCR Configuration File
+# All settings are editable - modify as needed
+
+# API Configuration
+api:
+  mistral:
+    # Get your API key from: https://console.mistral.ai/
+    api_key: ""  # Leave empty to use MISTRAL_API_KEY environment variable
+    ocr_model: "mistral-ocr-latest"
+    llm_model: "mistral-large-latest"
+
+# Processing Configuration
+processing:
+  batch_size: 7  # Number of pages to process before AI cleanup
+  max_retries: 3  # Maximum retry attempts for API calls
+  retry_backoff_base: 2  # Exponential backoff multiplier (seconds)
+  
+# Output Configuration
+output:
+  format: "docx"  # Options: docx, txt, markdown
+  filename_template: "OUTPUT_{timestamp}.docx"
+  
+# Logging Configuration
+logging:
+  level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR
+  file_enabled: true
+  file_path: "logs/novaocr.log"
