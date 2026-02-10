@@ -21,6 +21,13 @@ cd d:\Git\NovaOCR
 ```
 
 2. **Install dependencies**
+
+**Option A - Use install script (Easy):**
+```bash
+install.bat
+```
+
+**Option B - Manual install:**
 ```bash
 pip install -r requirements.txt
 ```
@@ -50,20 +57,27 @@ MISTRAL_API_KEY=your-mistral-api-key-here
 ### Usage
 
 **🖥️ Desktop GUI (Recommended)**
+
+**Option A - Use launcher (Easy):**
 ```bash
-python src/main.py
+run.bat
+```
+
+**Option B - Direct command:**
+```bash
+python -m src.main
 ```
 
 **⌨️ CLI Mode**
 ```bash
 # Basic usage
-python src/main.py --cli --input-folder ./scans
+python -m src.main --cli --input-folder ./scans
 
 # Custom output
-python src/main.py --cli --input-folder ./scans --output-name mybook.docx
+python -m src.main --cli --input-folder ./scans --output-name mybook.docx
 
 # Debug mode
-python src/main.py --cli --input-folder ./scans --log-level DEBUG
+python -m src.main --cli --input-folder ./scans --log-level DEBUG
 ```
 
 ## 📖 How It Works

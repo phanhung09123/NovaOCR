@@ -1,5 +1,4 @@
 # NovaOCR System Prompts
-# Fully editable prompts in English
 
 text_cleanup:
   system_prompt: |
@@ -37,4 +36,4 @@ text_cleanup:
     
     5. OUTPUT ONLY: Cleaned text, no greetings or explanations.
   
-  temperature: 0  # Set to 0 for consistent, non-creative output
+  temperature: 0  # Creativity level (0 = most consistent, 1 = most creative)

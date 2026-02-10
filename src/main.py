@@ -1,30 +1,24 @@
-"""NovaOCR - Main Entry Point
-
-Professional OCR Desktop Application with AI-powered text cleanup.
-
+"""
 Usage:
     # Launch GUI (default)
-    python src/main.py
+    python -m src.main
     
     # CLI mode
-    python src/main.py --cli --input-folder ./scans --output-name output.docx
+    python -m src.main --cli --input-folder ./scans --output-name output.docx
 """
 import sys
 import argparse
 from pathlib import Path
 from datetime import datetime
 
-# Add src to path
-sys.path.insert(0, str(Path(__file__).parent))
-
-from core.config_manager import ConfigManager
-from core.file_handler import FileHandler
-from core.batch_processor import BatchProcessor
-from providers.mistral_ocr import MistralOCRProvider
-from providers.mistral_llm import MistralLLMProvider
-from output.docx_generator import DOCXGenerator
-from output.txt_generator import TXTGenerator
-from utils.logger import Logger
+from src.core.config_manager import ConfigManager
+from src.core.file_handler import FileHandler
+from src.core.batch_processor import BatchProcessor
+from src.providers.mistral_ocr import MistralOCRProvider
+from src.providers.mistral_llm import MistralLLMProvider
+from src.output.docx_generator import DOCXGenerator
+from src.output.txt_generator import TXTGenerator
+from src.utils.logger import Logger
 
 
 def run_cli(args):
@@ -133,7 +127,7 @@ def run_cli(args):
 
 def run_gui():
     """Run in GUI mode"""
-    from gui.app import run_gui as launch_gui
+    from src.gui.app import run_gui as launch_gui
     launch_gui()
 
 
