@@ -131,5 +131,3 @@ MIT License - feel free to use and modify!
 - **Pypandoc** - Document conversion
 
 ---
-
-Built with ❤️ using SOLID principles for maximum extensibility.
