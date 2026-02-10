@@ -252,7 +252,6 @@ class MainWindow(QMainWindow):
             "<li>Batch processing with progress tracking</li>"
             "<li>Configurable settings and prompts</li>"
             "</ul>"
-            "<p>Built with SOLID principles for extensibility.</p>"
         )
     
     def start_processing(self):
@@ -350,7 +349,13 @@ class MainWindow(QMainWindow):
         self.processing_thread.finished.connect(self.on_processing_finished)
         self.processing_thread.error.connect(self.on_processing_error)
         
+        # Show initial feedback
+        self.progress_widget.update_status("🚀 Initializing OCR processing...")
+        self.log(f"📄 Processing {len(file_paths)} files...")
+        self.log(f"💾 Output: {output_path}")
+        
         self.processing_thread.start()
+        self.log("✅ Processing thread started")
     
     def pause_processing(self):
         """Pause processing"""
