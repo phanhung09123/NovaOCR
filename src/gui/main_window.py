@@ -195,9 +195,7 @@ class MainWindow(QMainWindow):
         """Open folder browser"""
         folder = QFileDialog.getExistingDirectory(
             self,
-            "Select Folder with Images/PDFs",
-            "",
-            QFileDialog.Option.ShowDirsOnly
+            "Select Folder with Images/PDFs"
         )
         
         if folder:

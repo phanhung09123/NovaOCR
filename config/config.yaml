@@ -1,12 +1,12 @@
 api:
   mistral:
-    api_key: ''
+    api_key: 'YOUR_MISTRAL_API_KEY_HERE'
     llm_model: mistral-large-latest
     ocr_model: mistral-ocr-latest
 logging:
   file_enabled: true
   file_path: logs/novaocr.log
-  level: INFO
+  level: DEBUG
 output:
   filename_template: OUTPUT_{timestamp}.docx
   format: docx
