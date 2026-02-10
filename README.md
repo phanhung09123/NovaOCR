@@ -17,7 +17,8 @@
 
 1. **Clone the repository**
 ```bash
-cd d:\Git\NovaOCR
+git clone https://github.com/phanhung09123/NovaOCR.git
+cd NovaOCR
 ```
 
 2. **Install dependencies**
