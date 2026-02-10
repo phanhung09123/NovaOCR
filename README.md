@@ -1,6 +1,6 @@
 # NovaOCR
 
-![NovaOCR](https://img.shields.io/badge/version-1.0.0-blue) ![Python](https://img.shields.io/badge/python-3.8+-green) ![License](https://img.shields.io/badge/license-MIT-orange)
+![NovaOCR](https://img.shields.io/badge/version-1.0.0-blue) ![Python](https://img.shields.io/badge/python-3.8+-green) ![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
 
 ## ✨ Features
 
@@ -139,10 +139,3 @@ text_cleanup:
 **GUI won't launch**
 - Ensure PyQt6 is installed: `pip install PyQt6`
 - Try CLI mode: `python src/main.py --cli`
-
-## 📝 License
-
-MIT License - feel free to use and modify!
-- **Pypandoc** - Document conversion
-
----
