@@ -1,21 +1,15 @@
-# NovaOCR - Professional OCR Desktop Application
-
-**OCR + AI-powered text cleanup** with a beautiful desktop interface and full SOLID architecture.
+# NovaOCR - AI OCR W
 
 ![NovaOCR](https://img.shields.io/badge/version-1.0.0-blue) ![Python](https://img.shields.io/badge/python-3.8+-green) ![License](https://img.shields.io/badge/license-MIT-orange)
 
 ## ✨ Features
 
-- **🖥️ Desktop GUI** - Beautiful PyQt6 interface with drag-and-drop support
 - **🤖 AI-Powered** - Mistral Large for intelligent text cleanup
 - **📄 OCR Support** - Process PDFs and images (PNG, JPG, WEBP)
 - **⚡ Batch Processing** - Process multiple files efficiently
 - **🎯 Real-time Progress** - Live updates and statistics
 - **⚙️ Fully Configurable** - Edit API keys, models, prompts via GUI or YAML
-- **🔄 Pause/Resume** - Control processing flow
 - **📝 Multiple Formats** - Output to DOCX or TXT
-- **⌨️ CLI Mode** - Command-line interface for automation
-- **🏗️ SOLID Architecture** - Extensible and maintainable codebase
 
 ## 🚀 Quick Start
 
@@ -114,85 +108,6 @@ text_cleanup:
   temperature: 0
 ```
 
-## 🏗️ Architecture
-
-Built with **SOLID principles** for extensibility:
-
-```
-┌─────────────┐     ┌─────────────┐
-│   Desktop   │────▶│     CLI     │
-│     GUI     │     │  Interface  │
-└─────────────┘     └─────────────┘
-       │                   │
-       └───────┬───────────┘
-               ▼
-    ┌──────────────────┐
-    │  Application     │
-    │  Controller      │
-    └──────────────────┘
-               │
-       ┌───────┼───────┐
-       ▼       ▼       ▼
-    ┌────┐ ┌────┐ ┌────┐
-    │OCR │ │LLM │ │Out │
-    └────┘ └────┘ └────┘
-```
-
-### Key Components
-
-- **Interfaces** - Abstract base classes (Open/Closed Principle)
-- **Providers** - Mistral OCR & LLM implementations
-- **Core** - Config manager, file handler, batch processor
-- **GUI** - PyQt6 desktop application
-- **Output** - DOCX and TXT generators
-
-## 🔧 Extending NovaOCR
-
-### Add New OCR Provider
-
-```python
-# src/providers/google_vision_ocr.py
-from interfaces.ocr_provider import OCRProvider
-
-class GoogleVisionOCR(OCRProvider):
-    def extract_text(self, file_path: str) -> str:
-        # Your implementation
-        pass
-```
-
-### Add New LLM Provider
-
-```python
-# src/providers/openai_llm.py
-from interfaces.llm_provider import LLMProvider
-
-class OpenAILLM(LLMProvider):
-    def clean_text(self, raw_text: str, ...) -> str:
-        # Your implementation
-        pass
-```
-
-**No modification to existing code required!** ✅
-
-## 📁 Project Structure
-
-```
-NovaOCR/
-├── config/
-│   ├── config.yaml       # Main configuration
-│   └── prompts.yaml      # Editable prompts
-├── src/
-│   ├── interfaces/       # Abstract interfaces
-│   ├── providers/        # OCR & LLM providers
-│   ├── output/           # Output generators
-│   ├── core/             # Core business logic
-│   ├── gui/              # Desktop GUI
-│   ├── utils/            # Utilities
-│   └── main.py           # Entry point
-├── requirements.txt
-└── README.md
-```
-
 ## 🐛 Troubleshooting
 
 **"API Key Missing"**
@@ -213,11 +128,6 @@ NovaOCR/
 ## 📝 License
 
 MIT License - feel free to use and modify!
-
-## 🙏 Credits
-
-- **Mistral AI** - OCR and LLM services
-- **PyQt6** - Desktop GUI framework
 - **Pypandoc** - Document conversion
 
 ---
